@@ -29,11 +29,10 @@ Route::post('/login', [UserController::class, 'login'])->name('login');
 //Rota de interface para validar as credencias do login
 Route::post('/register', [UserWebController::class, 'store'])->name('register');
 
-//Rota de interface para buscar dados de postagem
-Route::post('/getdata', [AcpController::class, 'gerarXls'])->name('getdata');
-
-//Rota de interface dashboard protegida pela Auth JWT, para somente usuário logados acessem  
 Route::group(['middleware' => ['apiJwt']], function () {
+    //Rota de interface dashboard protegida pela Auth JWT, para somente usuário logados acessem  
     Route::get('/postagens', [AcpController::class, 'acp'])->name('painelacp');
+    //Rota de interface para buscar dados de postagem
+    Route::post('/getdata', [AcpController::class, 'gerarXls'])->name('getdata');
 });
 
