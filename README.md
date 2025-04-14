@@ -89,11 +89,10 @@
    - Acesse após subir o servidor no navegador:
    - http://127.0.0.1:8000
    
-   - Você verá a seguinte interface
-     
-  
+   - Você verá a seguinte interface   
+
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b4c8adb5-74e2-4f2c-83b0-bc636156fe7f" alt="Codificando..." style="border-radius: 30px;"/>
+  <img src="https://github.com/user-attachments/assets/2ff3ad33-56a4-41c0-bf84-bdfa99a1ebfc" alt="Codificando..." style="border-radius: 30px;"/>
 </p>
 
 ## 🧠 Principais Tecnologias
