@@ -30,7 +30,7 @@ class UserController extends Controller
         return User::all();  // Retorna todos os usuários sem filtros.
     }
 
-     /**
+    /**
      * Exibe os dados de um usuário específico pelo ID.
      * Rota: GET /api/users/{id}
      *
@@ -39,14 +39,14 @@ class UserController extends Controller
      */
     public function show($id)
     {
-       
+
         //valido se o usuário é existente
         if(User::find($id) == null)
-        return HelperApiController::ExistText($id, 'users');
+            return HelperApiController::ExistText($id, 'users');
 
         // Encontra e retorna um usuário pelo ID ou lança uma exceção se não encontrado.
         return User::findOrFail($id);
-    } 
+    }
 
     /**
      * Cria um novo usuário no banco de dados.
@@ -79,7 +79,7 @@ class UserController extends Controller
 
         // Retornando o usuário criado
         return response()->json($user, 201);
-        
+
     }
 
     /**
@@ -92,9 +92,9 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-         //valido se o usuário é existente
-         if(User::find($id) == null)
-         return HelperApiController::ExistText($id, 'users');
+        //valido se o usuário é existente
+        if(User::find($id) == null)
+            return HelperApiController::ExistText($id, 'users');
 
         // Encontra o usuário pelo ID ou lança uma exceção se não encontrado.
         $user = User::findOrFail($id);
@@ -117,7 +117,7 @@ class UserController extends Controller
     {
         //valido se o usuário é existente
         if(User::find($id) == null)
-        return HelperApiController::ExistText($id, 'users');
+            return HelperApiController::ExistText($id, 'users');
 
         // Encontra e deleta o usuário pelo ID.
         User::findOrFail($id)->delete();
@@ -126,7 +126,7 @@ class UserController extends Controller
         return response()->json(['message' => 'Usuário deletado com sucesso!']);
     }
 
-      /**
+    /**
      * Validar se existe um token ativo
      *
      * @param  \Illuminate\Http\Request  $request
@@ -152,13 +152,15 @@ class UserController extends Controller
 
         $auth = new AuthController();
         $credentials = $request->only('email', 'password');
-
+        
 
         if (Auth::attempt($credentials)) {
             session(['token' => auth('api')->attempt($credentials)]);
             return redirect()->guest('/postagens')->cookie('token', session('token'), 60, null, null, false, true);
         }
 
+        session()->forget('token');
+        auth('api')->logout();
         return redirect()->back()->withErrors(['msg' => 'Credenciais Inválidas']);
     }
 }
