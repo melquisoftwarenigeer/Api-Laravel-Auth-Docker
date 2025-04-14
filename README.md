@@ -48,7 +48,7 @@
 
 ## 3️⃣ Configure o banco de dados (PostgreSQL)
 
-    -No arquivo .env, configure com os dados do seu PostgreSQL
+    -No arquivo .env, configure com as credenciais e banco do seu PostgreSQL
       Certifique que você criou o banco no seu SGBD
 
     -Se precisar testar na sua aplicação a conexão com banco de dados foi bem sucedida, siga esse passo no terminal:
