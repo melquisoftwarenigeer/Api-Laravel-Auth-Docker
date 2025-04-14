@@ -11,7 +11,7 @@
    
      Principais recursos:
 
-    🧑‍💻 Laravel 8
+    🧑‍💻 Laravel
     
     🔐 Autenticação com JWT
 
