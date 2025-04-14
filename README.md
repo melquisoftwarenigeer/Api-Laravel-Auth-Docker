@@ -36,7 +36,7 @@
 🚀 Como rodar o projeto localmente
 ## 1️⃣ Clone o projeto
 
-    -git clone https://github.com/melquideveloper/Api-Laravel-Auth-Docker.git
+    -git clone https://github.com/melquisoftwarenigeer/Api-Laravel-Auth-Docker.git
     -cd Api-Laravel-Auth-Docker\
 
 ## 2️⃣ Instale as dependências Laravel
