@@ -5,21 +5,23 @@
 
 # 👋 Hello, let's connect this technical repository to new opportunities!
 
-   ## Este repositório apresenta uma API moderna, robustas, segura e escalável desenvolvida com Laravel.
+   ## Este repositório apresenta uma API moderna, robustas, segura e escalável.
    
    ## By software engineer Melquisedeque Bispo de Jesus
    
      Principais recursos:
 
+    🧑‍💻 Laravel 8
+    
     🔐 Autenticação com JWT
 
     🗄️ Banco de dados PostgreSQL
 
-    🐳 Up do servidor sendo pelo Docker ou execução via Artisan
+    🐳 Docker 
 
-    📊 Exportação de dados em Excel (disponível após login)
+    📊 Front End intuitivo e simples, para exportação de dados em Excel (disponível após login)
 
-    🌱 Migrations + Seeders configurados para facilitar testes e replicação do ambiente
+    🌱 Migrations + Seeders configurados no projeto para facilitar testes e replicação do ambiente
 
 📍 Documentação.pdf, Localizada na raiz do projeto nela contém:
 
