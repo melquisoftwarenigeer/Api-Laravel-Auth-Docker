@@ -79,7 +79,7 @@
 ## 5️⃣ Deseja Subir o Servidor com Laravel Artisan?
     
     -php artisan serve 
-    -php artisan serve --host=seu_ip --port=9090 (Ser preferir Acesso Em toda Rede Local)
+    -php artisan serve --host=seu_ip --port=9090 (Se preferir Acesso Em toda Rede Local)
 
 ## 6️⃣ Teste os endpoints via Insomnia / Postman
 
